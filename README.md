@@ -58,3 +58,11 @@ node test-estoque.mjs
 ```
 
 O teste HTTP cria contas e dados fictícios em um banco temporário, usa sessões independentes, disputa recursos e reinicia o servidor para verificar persistência. Os outros dois testes executam funções reais do HTML com datas e registros fictícios. Veja o relatório de simulação para as premissas e falhas observadas.
+
+## Prévia na Vercel
+
+Importe a branch `main` com a raiz apontando para a raiz do repositório GitHub.
+O arquivo `vercel.json` publica `dist/index.html` em modo demonstrativo, com
+dados de teste e armazenamento no navegador. A agenda e o estoque compartilhados
+continuam disponíveis pelo servidor local. Para disponibilizá-los online, o
+servidor precisa de uma hospedagem com armazenamento persistente para o SQLite.
